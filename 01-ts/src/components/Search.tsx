@@ -11,7 +11,7 @@ const Search: FC<SearchProps> = ({ search }) => {
     setSearchValue(e.target.value);
   };
 
-  const resetInputField = () => {
+  const resetInputField = (): void => {
     setSearchValue('');
   };
 

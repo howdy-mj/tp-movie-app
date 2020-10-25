@@ -20,7 +20,6 @@ const App: FC = () => {
     });
   }, []);
 
-  // you can add this to the onClick listener of the Header component
   const refreshPage = () => {
     window.location.reload();
   };
@@ -64,7 +63,7 @@ const App: FC = () => {
   return (
     <div className="App">
       <div className="m-container">
-        <Header text="HOOKED" />
+        <Header text="HOOKED" refreshPage={refreshPage} />
 
         <Search search={search} />
 

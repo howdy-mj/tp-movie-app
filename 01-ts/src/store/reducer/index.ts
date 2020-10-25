@@ -1,4 +1,4 @@
-import { InitialStateProps, MovieProps } from './types';
+import { InitialStateProps, Action } from './types';
 
 export const initialState: InitialStateProps = {
   loading: true,
@@ -6,18 +6,7 @@ export const initialState: InitialStateProps = {
   errorMessage: null,
 };
 
-type Action =
-  | { type: 'SEARCH_MOVIES_REQUEST' }
-  | { type: 'SEARCH_MOVIES_SUCCESS'; movies: MovieProps[] }
-  | {
-      type: 'SEARCH_MOVIES_FAILURE';
-      error: null | string;
-    };
-
-export const reducer = (
-  state = initialState,
-  action: Action
-): InitialStateProps => {
+export const reducer = (state = initialState, action: Action) => {
   switch (action.type) {
     case 'SEARCH_MOVIES_REQUEST':
       return {
