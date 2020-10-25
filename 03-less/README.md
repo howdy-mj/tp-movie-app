@@ -1,6 +1,6 @@
-기존 JavaScript로 만들어진 것을 TypeScript로 변경
+[01-ts](https://github.com/howdy-mj/tp-movie-app/tree/master/01-ts)에서 CSS 였던 걸 Less로 변경
 
-[기존 Github](https://github.com/samie820/hooks-movie-app)
+eject는 하지 않고, craco로 설정
 
 ## 시작
 
