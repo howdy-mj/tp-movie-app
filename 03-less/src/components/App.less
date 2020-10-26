@@ -1,5 +1,11 @@
 @dark-color: #282c34;
 
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .App {
   text-align: center;
 
@@ -14,6 +20,10 @@
     color: white;
     padding: 20px;
     cursor: pointer;
+
+    h2 {
+      margin: 0;
+    }
   }
 
   .App-intro {
@@ -33,23 +43,7 @@
 }
 
 .movies {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.App-header h2 {
-  margin: 0;
-}
-
-.add-movies {
-  text-align: center;
-}
-
-.add-movies button {
-  font-size: 16px;
-  padding: 8px;
-  margin: 0 10px 30px 10px;
+  .flexRow;
 }
 
 .movie {
@@ -64,11 +58,14 @@
 }
 
 .search {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  .flexRow;
   justify-content: center;
   margin-top: 10px;
+
+  input[type='text'] {
+    width: 40%;
+    min-width: 170px;
+  }
 }
 
 input[type='submit'] {
@@ -79,16 +76,11 @@ input[type='submit'] {
   width: 80px;
   margin-left: 5px;
   cursor: pointer;
-}
 
-input[type='submit']:hover {
-  background-color: @dark-color;
-  color: antiquewhite;
-}
-
-.search > input[type='text'] {
-  width: 40%;
-  min-width: 170px;
+  &:hover {
+    background-color: @dark-color;
+    color: antiquewhite;
+  }
 }
 
 @media screen and (min-width: 694px) and (max-width: 915px) {
