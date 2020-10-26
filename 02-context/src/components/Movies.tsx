@@ -31,8 +31,6 @@ const Movies: FC = () => {
       ))
     );
 
-  console.log('movies=======', movies);
-
   return <div className="movies">{retrievedMovies}</div>;
 };
 
